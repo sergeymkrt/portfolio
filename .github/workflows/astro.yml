@@ -56,8 +56,8 @@ jobs:
         with:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
-      - run: npm install && npm run build
+          cache-dependency-path: ${{ env.BUILD_PATH }}/yarn.lock
+      - run: yarn install && yarn run build
         working-directory: ${{ env.BUILD_PATH }}
       - uses: actions/upload-pages-artifact@v1
         with:

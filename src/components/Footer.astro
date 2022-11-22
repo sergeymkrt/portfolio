@@ -1,13 +1,19 @@
 ---
+import Social from './Social.astro';
 const today = new Date();
 ---
-
-<footer>
-	&copy; {today.getFullYear()} Sergey Mkrtumyan. All rights reserved.
-</footer>
 <style>
 	footer {
-		padding: 25px;
-		text-align: center;
+	  display: flex;
+	  gap: 1rem;
+	  margin-top: 2rem;
+	  text-align: center;
 	}
-</style>
+  </style>
+
+<footer>
+	<Social platform="twitter" username="sergeymkrt" />
+	<Social platform="github" username="sergeymkrt" />
+	&copy; {today.getFullYear()} Sergey Mkrtumyan. All rights reserved.
+</footer>
+

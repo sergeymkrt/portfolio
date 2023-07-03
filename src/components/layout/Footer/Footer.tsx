@@ -1,4 +1,11 @@
+'use client';
+
 export default function Footer() {
+  async function getYear() {
+    const date = new Date();
+    return date.getFullYear();
+  }
+
   return (
     <footer className="bg-gray-800">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -17,7 +24,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="mt-8 text-center text-gray-400">
-          &copy; 2023 Your Company. All rights reserved.
+          &copy; {getYear()} Sergey Mkrtumyan. All rights reserved.
         </p>
       </div>
     </footer>

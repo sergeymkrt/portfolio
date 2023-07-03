@@ -1,3 +1,5 @@
+'use client';
+
 export default function Header() {
   return (
     <nav className="bg-gray-800">

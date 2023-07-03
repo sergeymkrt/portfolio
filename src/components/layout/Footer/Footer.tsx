@@ -1,7 +1,6 @@
 'use client';
-
 export default function Footer() {
-  async function getYear() {
+  function getYear() {
     const date = new Date();
     return date.getFullYear();
   }
